@@ -18,6 +18,10 @@ bot.on('text', async msg => {
     const chatId = msg.chat.id
     const messageId = msg.message_id
 
+    if (text === '/start') {
+        await bot.sendMessage(msg.chat.id, `Привет 👋`);
+    }
+
     const msgWait = await bot.sendMessage(msg.chat.id, `Генерирую ответ...`);
 
     const chatCompletion = await openai.chat.completions.create({
