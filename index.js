@@ -4,8 +4,8 @@ const OpenAI = require('openai')
 const TelegramBot = require('node-telegram-bot-api');
 
 const openai = new OpenAI({
-    // baseURL: 'https://api.proxyapi.ru/openai/v1',
-    apiKey: process.env.TEST,
+    baseURL: 'https://api.proxyapi.ru/openai/v1',
+    apiKey: process.env.OPENAI_API_KEY,
 });
 
 
